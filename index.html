@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>劳动人民的智慧 Zena 版</title>
+<title>Zena 工作台 · 工具城市</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=ZCOOL+QingKe+HuangYou&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#dfe8ff;--mute:#7f8db5;--bd:#10172d;--cy:#3df5ff;--mg:#ff3df2;--fd:"ZCOOL QingKe HuangYou","PingFang SC","Microsoft YaHei",sans-serif;--fb:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;--wcs:100%;--wcl:68%;--bub:#070b18;--bubc:#dff9ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -129,11 +129,213 @@ html[data-theme="day"] .gd{background:hsl(var(--h) 30% 45%/.6);box-shadow:none}
 html[data-theme="day"] #say,html[data-theme="day"] .np .bub{box-shadow:0 2px 8px rgba(20,40,90,.22)}
 html[data-theme="day"] .pp{filter:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.dust .sn,.dust .wn{opacity:.45}}
+
+/* ===== Modern UI refresh ===== */
+:root{
+  --ink:#e9e7f4;--mute:#9692a8;--bd:#171522;
+  --cy:#a78bfa;--mg:#f0a6ca;
+  --fd:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --fb:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+  --bub:#151320;--bubc:#f3f0fa;
+}
+html{background:#0b0a10}
+body{
+  color:var(--ink);
+  background:
+    radial-gradient(70% 55% at 10% 0%,rgba(124,92,230,.16),transparent 65%),
+    radial-gradient(55% 45% at 95% 5%,rgba(235,157,204,.09),transparent 68%),
+    #0b0a10;
+}
+body::after{display:none}
+.hud{
+  top:0;padding:12px 18px;
+  background:rgba(12,11,17,.78);
+  backdrop-filter:blur(18px) saturate(140%);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  box-shadow:0 8px 30px rgba(0,0,0,.12);
+}
+.lg{margin-right:8px}
+.lg i{font-size:10px;color:#a79db8;letter-spacing:.08em}
+.lg b{
+  font-size:20px;font-weight:700;letter-spacing:-.02em;color:#f3eef9;
+  text-shadow:none;
+}
+.hud input{
+  min-width:180px;border:1px solid rgba(255,255,255,.10);
+  border-radius:10px;background:rgba(255,255,255,.055);
+  color:var(--ink);padding:8px 11px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+}
+.hud input::placeholder{color:#777286}
+.hud input:focus{border-color:rgba(167,139,250,.65);box-shadow:0 0 0 3px rgba(167,139,250,.10)}
+.hud button{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.055);color:#d9d4e4;
+  border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600;
+  transition:background .18s,border-color .18s,transform .18s;
+}
+.hud button:hover{background:rgba(167,139,250,.12);border-color:rgba(167,139,250,.35);transform:translateY(-1px)}
+.wrap{max-width:1280px;padding:0 0 70px}
+.sub{
+  margin:14px 18px 2px;color:#858092;font-size:12px;
+}
+#map{padding:0 14px}
+.st{
+  margin-top:18px;padding-top:72px;border-radius:18px 18px 0 0;
+  background:
+    radial-gradient(circle at 12% 25%,rgba(167,139,250,.10) 0 1px,transparent 1.5px) 0 0/34px 34px,
+    linear-gradient(rgba(255,255,255,.018),rgba(255,255,255,.018)),
+    linear-gradient(#10101a,#0d0c14);
+  border:1px solid rgba(255,255,255,.055);
+  border-bottom:0;
+}
+.ci{gap:38px 48px;padding:0 14px}
+.dz{gap:38px 12px}
+.rd{height:32px;margin-top:3px;background:#0d0c13;border-top:1px solid rgba(255,255,255,.08)}
+.rd::before{
+  top:15px;height:1px;
+  background:repeating-linear-gradient(90deg,rgba(167,139,250,.22) 0 24px,transparent 24px 48px);
+}
+.rd span{
+  right:16px;top:7px;padding:0 8px;border-radius:6px;
+  background:#0d0c13;color:#777286;font-size:10.5px;
+}
+.b{width:92px;transition:transform .18s,opacity .25s,filter .18s}
+.b:hover,.b:focus-visible{transform:translateY(-5px)}
+.sn{
+  font-family:var(--fb);font-size:11.5px;font-weight:600;
+  padding:4px 7px;margin-bottom:5px;border:1px solid rgba(255,255,255,.13);
+  border-radius:8px;color:#c9c2d7;background:rgba(255,255,255,.035);
+  text-shadow:none;box-shadow:none;opacity:.68;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.l2 .sn{opacity:.82}.l3 .sn{opacity:.94}
+.l4 .sn{
+  opacity:1;color:#f0eafb;background:rgba(167,139,250,.12);
+  border-color:rgba(167,139,250,.52);
+  text-shadow:none;box-shadow:0 5px 18px rgba(124,92,230,.12);
+}
+.bd{
+  height:62px;background:linear-gradient(180deg,#191724,#111019);
+  border:1px solid rgba(255,255,255,.09);border-bottom:0;
+  border-radius:9px 9px 0 0;overflow:hidden;
+}
+.l2 .bd{height:98px}.l3 .bd{height:138px}.l4 .bd{
+  height:184px;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+}
+.wn{
+  inset:7px 7px 25px;opacity:.65;
+  background:
+    repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.055) 23px 26px),
+    repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.045) 31px 34px),
+    hsl(var(--h) 22% 19%);
+}
+.l2 .wn{opacity:.72}.l3 .wn{opacity:.82}.l4 .wn{opacity:.9}
+.dr{
+  width:12px;height:17px;margin-left:-6px;
+  background:hsl(var(--h) 42% 55%);box-shadow:0 0 8px hsl(var(--h) 55% 55% / .28);
+}
+.gd{height:3px;margin:0 -4px;background:hsl(var(--h) 48% 52% / .5);box-shadow:none}
+.lv{font-size:10px;color:#777286}
+.an{background:#3b354b}
+.an::after{background:#b9a8d7;box-shadow:none;animation:bl 2.5s infinite}
+.sg{
+  margin:0 0 50px;width:128px;padding:9px 10px 10px;
+  border:1px solid rgba(255,255,255,.12);border-radius:12px;
+  background:rgba(19,17,27,.82);
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+  backdrop-filter:blur(8px);
+}
+.sg b{
+  font-family:var(--fb);font-weight:700;font-size:14px;letter-spacing:0;
+  color:#eee9f6;text-shadow:none;
+}
+.sg small{margin-top:4px;font-size:10px;color:#807a8d}
+.sg::after{width:1px;height:34px;background:#353041}
+.k0 .sg,.k1 .sg,.k2 .sg,.k3 .sg{
+  border-radius:12px;outline:0;border-style:solid;border-width:1px;
+}
+.k1 .sg b::before{border-left-width:8px;border-top-width:5px;border-bottom-width:5px;margin-right:5px}
+.k2 .sg::before{display:none}
+.k0 .bd{border-top:2px solid hsl(var(--h) 55% 54% / .65)}
+.k1 .bd{border-radius:16px 16px 0 0}
+.k1 .wn{border-radius:10px 10px 3px 3px;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 2px,transparent 2px 5px),linear-gradient(160deg,hsl(var(--h) 45% 31%),hsl(calc(var(--h) + 35) 38% 25%))}
+.k2 .bd{border-radius:8px 8px 0 0}
+.k2 .bd::before{height:3px;background:hsl(var(--h) 50% 52% / .5)}
+.k2 .wn{inset:10px 7px 25px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.05) 0 12px,transparent 12px 20px),repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 22px,transparent 22px 34px),hsl(var(--h) 24% 20%)}
+.k3 .bd{border-radius:18px 18px 0 0}
+.k3 .wn{inset:16px 8px 25px;background:radial-gradient(circle,rgba(255,255,255,.22) 0 2px,transparent 2.8px) 0 0/13px 13px}
+.k1 .sn,.k2 .sn,.k3 .sn{border-style:solid;border-width:1px}
+.vine .sn{color:#555064;background:#15131c;border-color:#272431;box-shadow:none;transform:none}
+.vine .wn{opacity:.035}
+.vine .dr{background:#292534;box-shadow:none}
+.vine .bd{box-shadow:none;border-color:#24202d}
+.vine .gd{opacity:.18}
+.vine:hover .sn,.vine:focus-visible .sn{color:#b5a9c8;text-shadow:none;border-color:#4a4155}
+.b.dim{opacity:.13;filter:grayscale(.7)}
+.np .bub,#say{
+  background:rgba(21,19,30,.94);color:#ddd7e7;
+  border:1px solid rgba(167,139,250,.38);border-radius:9px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  backdrop-filter:blur(8px);
+}
+.np .bub{padding:5px 9px;font-size:11.5px}
+#say{padding:5px 10px;font-size:12px}
+#fx{opacity:.22}
+html[data-theme="day"]{
+  --ink:#302b3b;--mute:#746d7e;--bd:#e8e3ef;
+  --cy:#7c5ce6;--mg:#c982b0;--wcs:45%;--wcl:36%;
+  --bub:#fff;--bubc:#302b3b;background:#f4f1f8;
+}
+html[data-theme="day"] body{
+  background:
+    radial-gradient(60% 45% at 10% 0%,#eee7fb 0,transparent 65%),
+    radial-gradient(50% 40% at 95% 5%,#f7eaf3 0,transparent 68%),
+    #f4f1f8;
+}
+html[data-theme="day"] .hud{background:rgba(250,248,252,.82);border-bottom-color:rgba(67,58,81,.10);box-shadow:0 8px 24px rgba(57,47,75,.07)}
+html[data-theme="day"] .lg i{color:#8a8195}
+html[data-theme="day"] .lg b{color:#302b3b}
+html[data-theme="day"] .hud input{background:rgba(255,255,255,.72);border-color:rgba(67,58,81,.12);color:#302b3b}
+html[data-theme="day"] .hud button{background:rgba(255,255,255,.72);color:#4c4457;border-color:rgba(67,58,81,.11)}
+html[data-theme="day"] .hud button:hover{background:#fff;border-color:rgba(124,92,230,.28)}
+html[data-theme="day"] .st{
+  background:
+    radial-gradient(circle at 12% 25%,rgba(124,92,230,.07) 0 1px,transparent 1.5px) 0 0/34px 34px,
+    linear-gradient(#f7f5fa,#f0edf5);
+  border-color:rgba(67,58,81,.08);
+}
+html[data-theme="day"] .rd{background:#e9e5ee;border-top-color:#d9d3e1}
+html[data-theme="day"] .rd::before{background:repeating-linear-gradient(90deg,rgba(124,92,230,.18) 0 24px,transparent 24px 48px)}
+html[data-theme="day"] .rd span{background:#e9e5ee;color:#837b8e}
+html[data-theme="day"] .sg{background:rgba(255,255,255,.82);box-shadow:0 8px 24px rgba(55,45,72,.09);border-color:rgba(67,58,81,.10)}
+html[data-theme="day"] .sg b{color:#40374b}
+html[data-theme="day"] .sg small{color:#81788b}
+html[data-theme="day"] .sn{color:#62586e;background:rgba(255,255,255,.68);border-color:rgba(67,58,81,.12);box-shadow:0 2px 8px rgba(55,45,72,.06)}
+html[data-theme="day"] .l4 .sn{color:#513e78;background:rgba(124,92,230,.08);border-color:rgba(124,92,230,.32);box-shadow:none}
+html[data-theme="day"] .bd{background:linear-gradient(180deg,#eeeaf3,#e4e0ea);border-color:rgba(67,58,81,.10)}
+html[data-theme="day"] .wn{background:repeating-linear-gradient(90deg,transparent 0 23px,rgba(67,58,81,.055) 23px 26px),repeating-linear-gradient(0deg,transparent 0 31px,rgba(67,58,81,.045) 31px 34px),hsl(var(--h) 20% 80%)}
+html[data-theme="day"] .l4 .bd{box-shadow:0 10px 24px rgba(55,45,72,.10)}
+html[data-theme="day"] .vine .sn{color:#91899a;border-color:#d3ced9;background:#e8e4ec}
+html[data-theme="day"] .np .bub,html[data-theme="day"] #say{background:rgba(255,255,255,.94);color:#4a4253;border-color:rgba(124,92,230,.22);box-shadow:0 6px 18px rgba(55,45,72,.10)}
+@media (max-width:700px){
+  .hud{padding:10px 12px;gap:7px}
+  .lg{width:100%;flex-direction:row;align-items:baseline;gap:7px}
+  .lg b{font-size:18px}
+  .hud input{min-width:0;flex:1}
+  .hud button{padding:7px 8px;font-size:11px}
+  .sub{margin-left:14px;margin-right:14px}
+  .ci{gap:34px 24px}
+  .b{width:82px}
+  .sg{width:112px}
+}
+
 </style>
 </head>
 <body>
-<div class="hud"><div class="lg"><i>Zena 版</i><b>劳动人民的智慧</b></div><input id="q" placeholder="找哪栋楼？输入名字，回车进门" autocomplete="off" aria-label="搜索"><button id="rnd">随机逛逛</button><button id="thm">切到白天</button><button id="ff">快进时间</button><button id="rs">清空记录</button></div>
-<div class="wrap"><p class="sub" id="cnt"></p><div id="map"><div id="me"><span id="say">夜班开始了</span></div></div></div>
+<div class="hud"><div class="lg"><i>ZENA WORKSPACE</i><b>工具城市</b></div><input id="q" placeholder="搜索工具，输入名称后回车" autocomplete="off" aria-label="搜索"><button id="rnd">随机看看</button><button id="thm">切换白天</button><button id="ff">时间快进</button><button id="rs">重置记录</button></div>
+<div class="wrap"><p class="sub" id="cnt"></p><div id="map"><div id="me"><span id="say">今天开工了</span></div></div></div>
 
 <script>
 var G="https://gist.githack.com/zenazhou-creator/";
@@ -225,17 +427,17 @@ function bld(x){
   var t;b.onmouseenter=b.onfocus=function(){clearTimeout(t);t=setTimeout(function(){goTo(b,msg(x))},90)};
   b.onmouseleave=function(){clearTimeout(t)};
   function visit(){
-    if(off){goTo(b,"快进预览中，这次进门不计入记录");return}
+    if(off){goTo(b,"时间预览中，这次访问不计入记录");return}
     var before=info(x).l,r=S[x[1]];r.n++;r.t=Date.now();save();paint(b,x);stat();
-    var l=info(x).l;goTo(b,l>before?"升级啦：现在是"+LN[l]:msg(x));
+    var l=info(x).l;goTo(b,l>before?"升级啦，现在是"+LN[l]:msg(x));
   }
   b.addEventListener("click",visit);b.addEventListener("auxclick",visit);
   all.push(b);return b;
 }
 var KI={"文章与 SEO":0,"红人与 YouTube":1,"小工具":2,"玩":3};
-var META={"文章与 SEO":"字字见血，页页排名","红人与 YouTube":"今天也在追博主","小工具":"能偷懒绝不手动","玩":"摸鱼特区"};
+var META={"文章与 SEO":"内容、SEO，一站式处理","红人与 YouTube":"找红人、做合作、查数据","小工具":"能自动化，就别手动","玩":"放松一下，也算效率"};
 var REDUCED=matchMedia("(prefers-reduced-motion:reduce)").matches;
-var LINES=["又在歹毒的工作吗？","周一是一周里最长的一天。","这个需求，昨天就要。","会议能用邮件解决，邮件能用沉默解决。","我不是摸鱼，我是在等灵感下班。","KPI 是公司的，头发是自己的。","老板说不急，然后每十分钟问一次。","GA4 的数字，看得我血压高。","今天的博主，又没回邮件。","谁发明的「顺便看一下」？","咖啡续命，续到第三杯。","文档改到 v17_最终版_真的最终。","下班？我一半灵魂已经下了。","这个链接怎么又 404 了。","UTM 拼错的人，请自觉举手。","红人合作，九成时间在等回复。","别卷了，路灯都下班了。","劳动人民最光荣，也最想下班。","Ctrl+S 是打工人的心理安慰。","周五下午，只适合整理书签。","没有不加班的项目，只有不肯认的人。","我的工位，是全公司最忙的座位。","别看了，你的楼比你还勤奋。","喝水了吗？没有就先喝水。","我只是路过，不是来催你的。"];
+var LINES=["今天先把最重要的那件做完。","这个需求看起来很简单，通常不是。","先上线，再优化；先跑通，再精致。","我不是拖延，我是在等需求稳定。","会议纪要写完了，问题还在。","KPI 不会自己增长，但报表会。","先搜一下，说不定工具已经有了。","这个链接昨天还能打开，今天就不认识我了。","404 不是终点，是提醒你检查路径。","UTM 没问题，今天的我也还行。","数据不会说谎，但它经常需要解释。","邮件已发，剩下的交给时间。","对方说“晚点回复”，晚点通常很长。","版本名叫 final，不代表真的 final。","改一版不难，改到大家都满意才难。","能自动化的事情，就别让鼠标加班。","今天不一定高效，但可以先开始。","先把复杂的事情拆小。","这个按钮藏得挺好，差点没找到。","浏览器开了二十个标签，但我有计划。","先保存，再大胆操作。","老板问进度，进度也在问我。","今天的灵感，可能藏在一个小工具里。","少点几次复制粘贴，人生会轻松一点。","做完比做得完美更重要。","别急，缓存和情绪都会慢慢刷新。","看起来是小改动，实际上是全局样式。","如果能用三分钟解决，就别研究三十分钟。","今天也给自己留一点空白。","工作台整理好，脑子也会清爽一点。"];
 var pick=function(a){return a[Math.floor(Math.random()*a.length)]};
 var SK=["#f2c6a0","#d9a577","#a8744c","#7a4e32"],HI=["#15151f","#3d2314","#6b3fa0","#e7e7f0","#8a3b1a"],HUES=[185,318,85,35,265,10],npcs=[];
 function sprite(cls,c){
@@ -281,36 +483,36 @@ ST.forEach(function(s,si){
 });
 function stat(){
   var v=0,dd=0;D.forEach(function(x){v+=S[x[1]].n;if(info(x).dust)dd++});
-  $("cnt").textContent=D.length+" 栋楼，累计进门 "+v+" 次，"+(dd?dd+" 栋在闪烁或已熄灯。":"所有招牌都亮着。")+(off?"（快进预览中，进门不计入记录）":"越常去招牌越亮、楼越高，两周没去开始闪烁，一个月熄灯。");
+  $("cnt").textContent=D.length+" 个工具，累计打开 "+v+" 次，"+(dd?dd+" 个工具正在变淡或已熄灯。":"所有工具都还在营业。")+(off?"（快进预览中，进门不计入记录）":"常用工具会逐渐变亮，两周没用开始变淡，一个月后暂时熄灯。");
 }
 function repaint(){all.forEach(function(b){paint(b,b._x)});stat()}
 $("q").oninput=function(e){
   var q=e.target.value.trim().toLowerCase(),first=null;
   all.forEach(function(b){var hit=!q||b.dataset.s.indexOf(q)>=0;b.classList.toggle("dim",!hit);if(hit&&q&&!first)first=b});
-  if(first)goTo(first,"是这栋吗？回车进门");else if(q)goTo(all[0],"这里没有这栋");
+  if(first)goTo(first,"是这个吗？回车打开");else if(q)goTo(all[0],"没有找到这个工具");
 };
 $("q").onkeydown=function(e){if(e.key==="Enter"){var f=all.filter(function(b){return !b.classList.contains("dim")})[0];if(f)f.click()}};
 document.addEventListener("keydown",function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();$("q").focus();$("q").select()}});
 $("rnd").onclick=function(){
   var b=all[Math.floor(Math.random()*all.length)];
-  b.scrollIntoView({block:"center",behavior:"smooth"});goTo(b,"到啦，点一下进门");
+  b.scrollIntoView({block:"center",behavior:"smooth"});goTo(b,"找到了，点一下打开");
   b.classList.add("hi");setTimeout(function(){b.classList.remove("hi")},1600);
 };
 $("ff").onclick=function(){
   off=off===0?15:off===15?35:0;
-  $("ff").textContent=off?"快进了 "+off+" 天，再点继续":"快进时间";
-  repaint();goTo(all[0],off?"时间过去了 "+off+" 天……":"回到今天");
+  $("ff").textContent=off?"快进了 "+off+" 天，再点继续":"时间快进";
+  repaint();goTo(all[0],off?"时间预览：过去了 "+off+" 天……":"回到今天");
 };
 var rsT;$("rs").onclick=function(){
   var b=$("rs");
-  if(b.textContent!=="再点一次确认"){b.textContent="再点一次确认";rsT=setTimeout(function(){b.textContent="清空记录"},3000);return}
-  clearTimeout(rsT);b.textContent="清空记录";
-  D.forEach(function(x){S[x[1]]={n:0,t:0,t0:Date.now()}});save();repaint();goTo(all[0],"重新开张");
+  if(b.textContent!=="再点一次确认"){b.textContent="再点一次确认";rsT=setTimeout(function(){b.textContent="重置记录"},3000);return}
+  clearTimeout(rsT);b.textContent="重置记录";
+  D.forEach(function(x){S[x[1]]={n:0,t:0,t0:Date.now()}});save();repaint();goTo(all[0],"记录已重置");
 };
 var root=document.documentElement,TK="zena-town-theme";
 try{var sv=localStorage.getItem(TK);if(sv)root.dataset.theme=sv}catch(e){}
 if(!root.dataset.theme)root.dataset.theme="night";
-function thmLabel(){$("thm").textContent=root.dataset.theme==="day"?"切到夜晚":"切到白天"}
+function thmLabel(){$("thm").textContent=root.dataset.theme==="day"?"切到夜晚":"切换白天"}
 $("thm").onclick=function(){root.dataset.theme=root.dataset.theme==="day"?"night":"day";try{localStorage.setItem(TK,root.dataset.theme)}catch(e){}thmLabel()};
 thmLabel();
 if(!REDUCED){
@@ -339,7 +541,7 @@ if(!REDUCED){
 }
 window.addEventListener("resize",function(){if(tgt)goTo(tgt,say.textContent)});
 stat();
-setTimeout(function(){goTo(all[0],"夜班开始了，想去哪栋？")},300);
+setTimeout(function(){goTo(all[0],"今天开工了，想去哪栋？")},300);
 </script>
 </body>
 </html>
