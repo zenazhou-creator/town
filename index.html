@@ -232,11 +232,10 @@ function bld(x){
   b.addEventListener("click",visit);b.addEventListener("auxclick",visit);
   all.push(b);return b;
 }
-var KI={"SEO":0,"YouTube":1,"小工具":2,"玩":3};
-var META={"SEO":"字字见血，页页排名","YouTube":"发发发邮件","小工具":"能偷懒绝不手动","音乐":"好听好听"};
+var KI={"文章与 SEO":0,"红人与 YouTube":1,"小工具":2,"玩":3};
+var META={"文章与 SEO":"字字见血，页页排名","红人与 YouTube":"今天也在追博主","小工具":"能偷懒绝不手动","玩":"摸鱼特区"};
 var REDUCED=matchMedia("(prefers-reduced-motion:reduce)").matches;
-var LINES=["又在歹毒的工作吗？","周一是一周里最长的一天。","这个需求，昨天就要。","会议能用邮件解决，邮件能用沉默解决。","我不是摸鱼，我是在等灵感下班。","KPI 是公司的，头发是自己的。","上就是这个班","周一干活 周五打烊~
-","今天的博主，又没回邮件。","谁发明的「顺便看一下」？","让我们将美好与人性善意流转起来","晕碳中","下班？我一半灵魂已经下了。","这个链接怎么又 404 了。","UTM 拼错的人，请自觉举手。","红人合作，九成时间在等回复。","别卷了，路灯都下班了。","劳动人民最光荣，也最想下班。","Ctrl+S 是打工人的心理安慰。","周五下午，只适合整理书签。","没有不加班的项目，只有不肯认的人。","我的工位，是全公司最忙的座位。","别看了，你的楼比你还勤奋。","喝水了吗？没有就先喝水。","我只是路过，不是来催你的。"];
+var LINES=["又在歹毒的工作吗？","周一是一周里最长的一天。","这个需求，昨天就要。","会议能用邮件解决，邮件能用沉默解决。","我不是摸鱼，我是在等灵感下班。","KPI 是公司的，头发是自己的。","老板说不急，然后每十分钟问一次。","GA4 的数字，看得我血压高。","今天的博主，又没回邮件。","谁发明的「顺便看一下」？","咖啡续命，续到第三杯。","文档改到 v17_最终版_真的最终。","下班？我一半灵魂已经下了。","这个链接怎么又 404 了。","UTM 拼错的人，请自觉举手。","红人合作，九成时间在等回复。","别卷了，路灯都下班了。","劳动人民最光荣，也最想下班。","Ctrl+S 是打工人的心理安慰。","周五下午，只适合整理书签。","没有不加班的项目，只有不肯认的人。","我的工位，是全公司最忙的座位。","别看了，你的楼比你还勤奋。","喝水了吗？没有就先喝水。","我只是路过，不是来催你的。"];
 var pick=function(a){return a[Math.floor(Math.random()*a.length)]};
 var SK=["#f2c6a0","#d9a577","#a8744c","#7a4e32"],HI=["#15151f","#3d2314","#6b3fa0","#e7e7f0","#8a3b1a"],HUES=[185,318,85,35,265,10],npcs=[];
 function sprite(cls,c){
@@ -267,7 +266,7 @@ function mk(rd){
 }
 function spawn(rd,k){for(var i=0;i<k;i++)mk(rd)}
 me.insertBefore(sprite("hat me",318),say);
-var ST=[["内容大道",["SEO","YouTube"]],["工具巷",["小工具","玩"]]];
+var ST=[["内容大道",["文章与 SEO","红人与 YouTube"]],["工具巷",["小工具","玩"]]];
 ST.forEach(function(s,si){
   var st=el("div","st"),ci=el("div","ci");
   s[1].forEach(function(g){
@@ -340,7 +339,7 @@ if(!REDUCED){
 }
 window.addEventListener("resize",function(){if(tgt)goTo(tgt,say.textContent)});
 stat();
-setTimeout(function(){goTo(all[0],"又在歹毒的上班了？")},300);
+setTimeout(function(){goTo(all[0],"夜班开始了，想去哪栋？")},300);
 </script>
 </body>
 </html>
